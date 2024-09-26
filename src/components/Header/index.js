@@ -1,5 +1,3 @@
-
-import { useRef } from "react";
 import { Nav } from "./styles"
 
 import {
@@ -9,10 +7,7 @@ import {
   SiLinkedin
 } from "react-icons/si"
 
-function Header() {
-  const inicioSecaoRef = useRef(null);
-  const sobreSecaoRef = useRef(null);
-  const progetoSecaoRef = useRef(null);
+function Header({ inicioSecaoRef, sobreSecaoRef, progetoSecaoRef }) {
 
   const scrollToSection = (ref) => {
     ref.current.scrollIntoView({ behavior: "smooth" });

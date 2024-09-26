@@ -11,22 +11,23 @@ export const Nav = styled.nav`
   padding: 25px;
 
   .navBarArea {
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
-    height: 100%;
 
     .navBarItems {
       display: flex;
       align-items: center;
-      justify-content: flex-start;
       flex-direction: row;
-      width: 50%;
+
       height: 75px;
 
       .navBarItem {
+        background-color: transparent;
+        border: none;
         margin: 0 15px;
+        font-size: 14px;
         color: #fff;
       }
       .navBarItem:hover {
