@@ -1,7 +1,9 @@
+import { Container } from "./styles";
 
 function Home() {
+  <Container>
 
-  return (<div>Home</div>)
+  </Container>
 }
 
 export default Home;
