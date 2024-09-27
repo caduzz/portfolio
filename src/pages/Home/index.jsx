@@ -30,7 +30,7 @@ function Home() {
         </div>
       </section>
 
-      <section id="userInfoContainer" ref={sobreSecaoRef}>
+      <section id="userSobreSection" ref={sobreSecaoRef}>
         <div className="userInfo">
           <div className="userInfoArea">
             <h1 className="userName">Carlos Eduardo</h1>

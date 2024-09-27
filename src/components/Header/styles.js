@@ -24,6 +24,7 @@ export const Nav = styled.nav`
       height: 75px;
 
       .navBarItem {
+        cursor: pointer;
         background-color: transparent;
         border: none;
         margin: 0 15px;
