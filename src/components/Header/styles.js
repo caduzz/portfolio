@@ -28,8 +28,8 @@ export const Nav = styled.nav`
         background-color: transparent;
         border: none;
         margin: 0 15px;
-        font-size: 14px;
-        color: #fff;
+        font-size: 15px;
+        color: #ffffff;
       }
       .navBarItem:hover {
         color: #348cf0;
