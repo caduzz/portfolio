@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.main`
   width: 100%;
+  overflow: hidden;
 
   #userInfoSection {
     display: flex;
@@ -9,7 +10,7 @@ export const Container = styled.main`
     align-items: center;
     justify-content: center;
 
-    padding-inline: 12rem;
+    padding-inline: 25px;
 
     width: 100%;
     height: 100vh;
@@ -45,6 +46,7 @@ export const Container = styled.main`
           .userDescription {
             color: #afafaf;
             font-size: 18px;
+            text-align: justify;  
           }
 
           .serviceName {
@@ -52,19 +54,6 @@ export const Container = styled.main`
             font-family: 'Work Sans', sans-serif;
             color: #348cf0;
           }
-        }
-      }
-      .userDescriptionArea {
-        display: flex;
-        justify-content: flex-end;
-        align-items: flex-end;
-
-        .userDescription {
-          text-align: end;
-          margin-top: 15px;
-          color: #ffffff;
-          font-size: 15px;
-          font-family: 'Work Sans', sans-serif;
         }
       }
     }
@@ -75,7 +64,7 @@ export const Container = styled.main`
     flex-direction: column;
     align-items: center;
 
-    padding: 20px;
+    padding: 25px;
 
     width: 100%;
     height: 100vh;
@@ -84,11 +73,14 @@ export const Container = styled.main`
 
     .sobreContainer {
       width: 100%;
+      gap: 50px;
+
+      padding: 85px;
 
       display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      justify-content: flex-start;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
 
       .sobreHeaderArea {
         color: #333333;
@@ -98,15 +90,26 @@ export const Container = styled.main`
         font-weight: bold;
       }
 
-      .sobreContentArea {
-        width: 50%;
+      .sobreDescriptionArea {
         display: flex;
+        flex-direction: column;
+        gap: 25px;
 
-        p {
-          font-size: 16px;
-          font-family: 'Work Sans', sans-serif;
+        width: 100%;
+      
+        .sobreDescripiton {
+          
+          margin-top: 15px;
+
+          color: #333333;
+
+          font-size: 18px;
+          font-family: "Roboto", sans-serif;
+          font-weight: 400;
+          text-align: justify;
         }
       }
+  
     } 
   }
 
@@ -114,10 +117,37 @@ export const Container = styled.main`
     display: flex;
     flex-direction: column;
 
-    padding: 20px;
-
     width: 100%;
     height: 100vh;
+
+    .sobreSkillsArea {
+        width: 100%;
+        
+        color: #333333;
+        font-family: "Roboto", sans-serif;
+
+        .sobreSkillFilterArea {
+          width: 100%;
+
+          display: flex;
+          gap: 15px;
+        }
+
+        .sobreSkillsContent {
+          margin-top: 25px;
+          width: 100%;
+          display: flex;
+          flex-direction: row;
+          
+          .sobreSkillsSwiper {
+            width: 100%;
+
+            gap: 50px;
+            display: flex;
+            flex-direction: row;
+          }
+        }
+      }
 
     .projectContainer {
       width: 100%;
@@ -135,6 +165,20 @@ export const Container = styled.main`
         font-size: 22px;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
       }
+      
     }
   }
+`
+
+export const ButtonFilter = styled.button`
+  text-transform: capitalize;
+  width: 80px;
+  padding: 5px;
+  color: ${p => p.active ? '#348cf0' : '#333333'};
+
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+
 `

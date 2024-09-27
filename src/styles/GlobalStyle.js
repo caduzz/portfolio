@@ -17,11 +17,6 @@ const GlobalStyle = createGlobalStyle`
       Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   }
 
-  section {
-    scroll-behavior: smooth;
-    transition: .2s;
-  }
-
   body::-webkit-scrollbar {
     width: 7px;
     /* width of the entire scrollbar */
