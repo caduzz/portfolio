@@ -1,12 +1,13 @@
-import { act, useRef, useState } from "react";
+import { useRef, useState } from "react";
 
 import { ButtonFilter, Container } from "./styles";
 
 import Header from "../../components/Header";
 import CardSkill from "../../components/CardSkill";
-import { Swiper, SwiperSlide } from "swiper/react";
 
 import { skills, actions } from '../../services/data/skills'
+import { projects } from "../../services/data/projects";
+import CardProject from "../../components/CardProject";
 
 function Home() {
   const inicioSecaoRef = useRef(null);
@@ -76,20 +77,28 @@ function Home() {
               </article>
             </div>
           </div>
-          <div>
-            <img />
-          </div>
         </div>
       </section>
 
       <section id="projectSection" ref={progetoSecaoRef}>
         <div className="projectContainer">
           <div className="projectHeaderArea">
-            <h2>PROJETOS</h2>
+            <h2>Projetos</h2>
+          </div>
+          <div className="projectContent">
+            {projects.map(project => (
+              <CardProject
+                key={project.id}
+                data={project}
+              />)
+            )}
           </div>
         </div>
-        <div className="sobreSkillsArea">
-          <div className="sobreSkillFilterArea">
+      </section>
+
+      {/* <section id="skillsSection" ref={progetoSecaoRef}>
+        <div className="skillsArea">
+          <div className="skillFilterArea">
             {actions.map((action, index) => (
               <ButtonFilter
                 key={index}
@@ -102,9 +111,9 @@ function Home() {
               </ButtonFilter>
             ))}
           </div>
-          <div className="sobreSkillsContent">
+          <div className="skillsContent">
             <div
-              className="sobreSkillsSwiper"
+              className="skillsSwiper"
             >
               {skillsFilter.map(skill => (
                 <CardSkill
@@ -116,7 +125,7 @@ function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </Container>
   )
 }

@@ -120,43 +120,20 @@ export const Container = styled.main`
     width: 100%;
     height: 100vh;
 
-    .sobreSkillsArea {
-        width: 100%;
-        
-        color: #333333;
-        font-family: "Roboto", sans-serif;
-
-        .sobreSkillFilterArea {
-          width: 100%;
-
-          display: flex;
-          gap: 15px;
-        }
-
-        .sobreSkillsContent {
-          margin-top: 25px;
-          width: 100%;
-          display: flex;
-          flex-direction: row;
-          
-          .sobreSkillsSwiper {
-            width: 100%;
-
-            gap: 50px;
-            display: flex;
-            flex-direction: row;
-          }
-        }
-      }
+    padding: 25px;
 
     .projectContainer {
       width: 100%;
-      
+
+      padding: 25px 85px;
+
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
 
       .projectHeaderArea {
+        margin-bottom: 25px;
         text-align: center;
         width: 100%;
 
@@ -166,6 +143,11 @@ export const Container = styled.main`
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
       }
       
+      .projectContent {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2); 
+      }
     }
   }
 `
@@ -174,11 +156,8 @@ export const ButtonFilter = styled.button`
   text-transform: capitalize;
   width: 80px;
   padding: 5px;
-  color: ${p => p.active ? '#348cf0' : '#333333'};
-
   border-radius: 5px;
   cursor: pointer;
   border: none;
   background-color: transparent;
-
 `

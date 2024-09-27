@@ -1,17 +1,28 @@
 import { Container } from "./styles";
 
-function CardProject() {
+function CardProject({ data }) {
   return (
     <Container>
-      <div className="headerCardProject">
-
-      </div>
-      <div className="contentCardProject">
-        <p className="cardProjectTitle">Title</p>
-        <p className="cardProjectDescription">A descrição do projeto</p>
-        <div className="cardProject">
-
-        </div>
+      <div className="cardProject">
+        <a
+          href={data.uri}
+          target="_blank"
+        >
+          {data.img && (
+            <img
+              className="imgProject"
+              src={data.img_uri}
+              alt=""
+            />
+          )}
+          <div className="cardContentProject">
+            <p className="cardProjectTitle">{data.name}</p>
+            <p className="cardProjectDescription">{data.description}</p>
+            <div className="cardProjectTechs">
+              {data.techs.map(tech => (<span key={tech} className="cardTech">{tech}</span>))}
+            </div>
+          </div>
+        </a>
       </div>
     </Container>
   );
